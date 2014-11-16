@@ -1,13 +1,20 @@
+var test = require("prova");
 var now = require("./");
 
-it('returns unique unix times', function(){
+test('return unique ts', function (t) {
+  var i = 999, last = 0, val;
 
-  var i = 99, last = 0, cur;
+  while (i--) {
+    val = now();
 
-  while ( i -- ) {
-    cur = now();
-    expect(cur).to.be.above(last);
-    last = cur;
+    if (!last) {
+      last = val;
+      continue;
+    }
+
+    t.ok(last < val);
+    last = val;
   }
 
+  t.end();
 });

@@ -3,21 +3,18 @@
   "version": "0.0.0",
   "description": "Module to generate unique unix times",
   "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "devDependencies": {
-    "fox": "*"
-  },
   "keywords": [
     "time",
     "unix time",
     "epoch"
   ],
   "repository": {
-    "url": "git@github.com:azer\/unique-now.git",
+    "url": "git@github.com:azer/unique-now.git",
     "type": "git"
   },
   "author": "azer",
-  "license": "BSD"
+  "license": "BSD",
+  "devDependencies": {
+    "prova": "^1.15.0"
+  }
 }
